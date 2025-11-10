@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root{
+  --background-color:#111731;
+  --text-color:#4f9ed7;
+  --primary-color: white;
+  --secondary-color: gray;
+}
+
+@theme{
+  --color-backgroundcolor:var(--background-color);
+  --color-txtcolor:var(--text-color);
+  --color-primarycolor:var(--primary-color);
+  --color-secondarycolor:var(--secondary-color) 
+}
+
+button{
+   @apply text-white rounded-sm bg-linear-to-r/srgb from-[#4e9fd7] to-[#4930c2] px-3 py-1 cursor-pointer
+}
+body{
+  @apply bg-backgroundcolor text-primarycolor
+}
+@layer base{
+  .gridContent{
+    @apply w-[85%] grid grid-cols-2 mx-auto  text-justify
+  }
+}
